@@ -2,7 +2,7 @@
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'spring-boot:run'
+    goals: 'clean install'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
@@ -30,4 +30,4 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean install'
+    goals: 'spring-boot:run'
